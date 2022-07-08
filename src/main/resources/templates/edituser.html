@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>LIBRARY MANAGEMENT WEB</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <divclass="container">
+    <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card"> 
+    <h1 class="text-center">UPDATE STUDENT</h1>
+    <div class="card-body">
+    <form th:action="@{/Studentview/{id}(id=${student.S_id})}" th:object = "${student}" method="POST">
+    
+    <div class="form-group">
+    <label> FIRSTNAME</label>
+    <input type="text" name="firstName" th:field="*{Firstname}" placeholder="Enter firstName" class="form-control" required/>
+    </div>
+    
+    <div class="form-group">
+    <label> LASTNAME</label>
+    <input type="text" name="lastName" th:field="*{Lastname}" placeholder="Enter lastName" class="form-control" required/>
+    </div>
+    
+    <div class="form-group">
+    <label> USERNAME</label>
+    <input type="text" name="username" th:field="*{Username}" placeholder="Enter username" class="form-control" required/>
+    </div>
+    
+     <div class="form-group">
+    <label> EMAIL</label>
+    <input type="text" name="email" th:field="*{Email}" placeholder="Enter email" class="form-control" required/>
+    </div>
+    
+     <div class="form-group">
+    <label> PHONENO</label>
+    <input type="text" name="phoneno" th:field="*{Phoneno}" placeholder="Enter phoneno" class="form-control" required/>
+    </div>
+    
+     <div class="form-group">
+    <label> COURSENAME</label>
+    <input type="text" name="course" th:field="*{Coursename}" placeholder="Enter course" class="form-control"required/>
+    </div>
+    
+    
+    <div class="form-group">
+    <label> YEAR</label>
+    <input type="text" name="year" th:field="*{Year}" placeholder="Enter year" class="form-control"required/>
+    </div>
+    
+    <div class="form-group">
+    <label> PASSWORD</label>
+    <input type="text" name="password" th:field="*{Password}" placeholder="Enter password" class="form-control"required/>
+    </div>
+    <div class="box-footer">
+     <button type="submit" class="btn btn-primary"> Submit</button>
+     </div>
+    
+     </form>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
